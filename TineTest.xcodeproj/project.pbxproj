@@ -21,6 +21,7 @@
 		2515C5B41C0533E100F8AA7D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5B31C0533E100F8AA7D /* Bolts.framework */; };
 		2515C5B71C05398000F8AA7D /* TNParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2515C5B61C05398000F8AA7D /* TNParseManager.m */; };
 		2515C5BA1C053A2C00F8AA7D /* TNSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2515C5B91C053A2C00F8AA7D /* TNSession.m */; };
+		2515C5BC1C056D7300F8AA7D /* burrito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2515C5BB1C056D7300F8AA7D /* burrito.jpg */; };
 		253B136D1C041174006156F4 /* MonteguesMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253B136C1C041174006156F4 /* MonteguesMeatViewController.m */; };
 		253B136F1C0412C0006156F4 /* MonteguesMeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253B136E1C0412C0006156F4 /* MonteguesMeatView.xib */; };
 		254EA67D1BFC200800D501D3 /* MonteguesSandwichSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254EA67C1BFC200800D501D3 /* MonteguesSandwichSelectionViewController.m */; };
@@ -76,6 +77,7 @@
 		2515C5B61C05398000F8AA7D /* TNParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNParseManager.m; path = ../TNParseManager.m; sourceTree = "<group>"; };
 		2515C5B81C053A2C00F8AA7D /* TNSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSession.h; sourceTree = "<group>"; };
 		2515C5B91C053A2C00F8AA7D /* TNSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSession.m; sourceTree = "<group>"; };
+		2515C5BB1C056D7300F8AA7D /* burrito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burrito.jpg; sourceTree = "<group>"; };
 		253B136B1C041174006156F4 /* MonteguesMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonteguesMeatViewController.h; sourceTree = "<group>"; };
 		253B136C1C041174006156F4 /* MonteguesMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonteguesMeatViewController.m; sourceTree = "<group>"; };
 		253B136E1C0412C0006156F4 /* MonteguesMeatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonteguesMeatView.xib; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				25EE31871BE81F3000FCAF8A /* MainViewController.m */,
 				25EE31B31BE8310E00FCAF8A /* MainView.xib */,
 				25EE318C1BE81F3000FCAF8A /* Assets.xcassets */,
+				2515C5BB1C056D7300F8AA7D /* burrito.jpg */,
 				25EE31911BE81F3000FCAF8A /* Info.plist */,
 				25EE31801BE81F3000FCAF8A /* Supporting Files */,
 				254EA6831BFC3D5D00D501D3 /* TNOrderViewController.h */,
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25EE318D1BE81F3000FCAF8A /* Assets.xcassets in Resources */,
+				2515C5BC1C056D7300F8AA7D /* burrito.jpg in Resources */,
 				253B136F1C0412C0006156F4 /* MonteguesMeatView.xib in Resources */,
 				254EA6941BFC6D8700D501D3 /* SubmitOrderView.xib in Resources */,
 				254EA67F1BFC201400D501D3 /* MonteguesSandwichSelectionView.xib in Resources */,

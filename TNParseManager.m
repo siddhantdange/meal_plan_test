@@ -15,6 +15,9 @@
 @interface TNParseManager ()
 
 @property (nonatomic, strong) TNSession *currentSession;
+@property (nonatomic, strong) TNOrder *specialOrder;
+@property (nonatomic, strong) UIImage *specialImage;
+@property (nonatomic, strong) NSNumber *specialPrice;
 
 @end
 
@@ -82,5 +85,26 @@ static TNParseManager *gInstance;
     return gInstance;
 }
 
+
+- (void)getSpecialDetails:(void (^)(NSNumber *, NSNumber *, UIImage *, TNOrder *))completion {
+    
+    completion(@(YES), @(8.99f), [UIImage imageNamed:@"burrito.jpg"], self.specialOrder);
+    return;
+    
+    if (self.specialPrice) {
+        completion(@(YES), self.specialPrice, self.specialImage, self.specialOrder);
+    }
+    
+    [PFCloud callFunctionInBackground:@"yourCloudFunctionName"
+                       withParameters:@{@"parameterKey": @"parameterValue"}
+                                block:^(NSArray *results, NSError *error) {
+                                    if (!error) {
+                                        self.specialPrice = nil;
+                                        self.specialOrder = nil;
+                                        self.specialImage = nil;
+                                        completion(@(YES), self.specialPrice, self.specialImage, self.specialOrder);
+                                    }
+                                }];
+}
 
 @end

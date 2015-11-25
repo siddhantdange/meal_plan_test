@@ -27,6 +27,8 @@
     self.orderDetailsTextView.delegate = self;
     self.tableview.dataSource = self;
     
+    self.navigationItem.title = @"Details";
+    
     UIBarButtonItem *nextButton = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style: UIBarButtonItemStyleDone target:self action:@selector(submitAction)];
     [self.navigationItem setRightBarButtonItem:nextButton];
 }

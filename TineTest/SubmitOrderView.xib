@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="nameTextField" destination="eTa-Ca-SeR" id="VCR-dv-USt"/>
                 <outlet property="orderDetailsTextView" destination="NbV-sF-RIW" id="68U-Zc-e5u"/>
-                <outlet property="tableview" destination="AAZ-zd-3P4" id="8R0-bh-Wle"/>
+                <outlet property="tableview" destination="n7b-v1-evN" id="lD1-Wu-ExB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="YNz-WY-xH9"/>
             </connections>
         </placeholder>
@@ -18,11 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AAZ-zd-3P4">
-                    <rect key="frame" x="0.0" y="282" width="375" height="377"/>
-                    <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Q2-nN-X8t">
                     <rect key="frame" x="94" y="230" width="186" height="44"/>
                     <animations/>
@@ -51,6 +46,11 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-v1-evN">
+                    <rect key="frame" x="0.0" y="282" width="375" height="385"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

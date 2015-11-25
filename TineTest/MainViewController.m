@@ -1,7 +1,6 @@
 //
 //  ViewController.m
-//  TineTest
-//
+//  TineTest //
 //  Created by Siddhant Dange on 11/2/15.
 //  Copyright © 2015 Siddhant Dange. All rights reserved.
 //
@@ -9,14 +8,19 @@
 #import "MainViewController.h"
 #import "MonteguesSandwichSelectionViewController.h"
 #import "SubmitOrderViewController.h"
+#import "TNParseManager.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIView *specialDetailView;
+@property (weak, nonatomic) IBOutlet UILabel *specialPriceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *specialLabel;
 @property (weak, nonatomic) IBOutlet UIButton *viewLastOrderButton;
-@property (nonatomic, strong) NSArray *restaurants;
+@property (weak, nonatomic) IBOutlet UIImageView *specialImageView;
 @property (weak, nonatomic) IBOutlet UITableView *restaurantTableView;
-@property (nonatomic, strong) TNOrder *lastOrder;
 
+@property (nonatomic, strong) TNOrder *lastOrder;
+@property (nonatomic, strong) NSArray *restaurants;
 
 @end
 
@@ -31,10 +35,24 @@
     self.restaurants = @[@"Montegues"];
     self.restaurantTableView.delegate = self;
     self.restaurantTableView.dataSource = self;
+    
+    [self showSpecialDetails:NO];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(specialOrderPressed)];
+    [self.specialImageView addGestureRecognizer:tap];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self.currentOrder clearOrder];
+    [self loadLastOrder];
+    [self showSpecialDetails:NO];
+    
+    [self loadSpecial];
+}
+
+
+- (void)loadLastOrder {
     NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"last_order"];
     if (data) {
         self.viewLastOrderButton.userInteractionEnabled = YES;
@@ -47,10 +65,39 @@
 }
 
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self.currentOrder clearOrder];
+- (void)loadSpecial {
+    [[TNParseManager sharedInstance] getSpecialDetails:^(NSNumber *existsN, NSNumber *price, UIImage *image,  TNOrder *specialOrder) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (existsN.boolValue) {
+                self.specialPriceLabel.text = [NSString stringWithFormat:@"$%.02f", price.floatValue];
+                [self.specialImageView setImage:image];
+                [self showSpecialDetails:YES];
+            }
+        });
+    }];
 }
 
+
+- (void)showSpecialDetails:(BOOL)show {
+    self.specialImageView.hidden = !show;
+    self.specialDetailView.hidden = !show;
+    
+    float nextY = 0.0f;
+    if (show) {
+        nextY = 350.0f;
+    }
+    
+    CGRect frame = self.restaurantTableView.frame;
+    frame.origin.y = nextY;
+    self.restaurantTableView.frame = frame;
+}
+
+
+- (void)specialOrderPressed {
+    TNOrder *special = self.lastOrder;
+    SubmitOrderViewController *submit = [[SubmitOrderViewController alloc] initWithNibName:@"SubmitOrderView" bundle:[NSBundle mainBundle] order:special];
+    [self.navigationController pushViewController:submit animated:YES];
+}
 
 - (IBAction)viewLastOrder:(id)sender {
     SubmitOrderViewController *submit = [[SubmitOrderViewController alloc] initWithNibName:@"SubmitOrderView" bundle:[NSBundle mainBundle] order:self.lastOrder];

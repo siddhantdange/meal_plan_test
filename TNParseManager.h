@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@import UIKit;
+
 #import "TNOrder.h"
 
 @interface TNParseManager : NSObject
@@ -15,6 +17,9 @@
 + (instancetype)sharedInstance;
 
 - (void)sendOrder:(TNOrder *)order;
+
+- (void)getSpecialDetails:(void(^)(NSNumber*, NSNumber *, UIImage *, TNOrder *))completion;
+
 - (void)startSession;
 - (void)endSession;
 
