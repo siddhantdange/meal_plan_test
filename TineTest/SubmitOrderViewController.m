@@ -36,10 +36,6 @@
     BOOL valid = YES;
     NSString *details = self.orderDetailsTextView.text;
     
-    if ([details isEqualToString:@"Additional Details (optional)"]) {
-        details = @"No Additional Details";
-    }
-    
     NSString *name = self.nameTextField.text;
     valid = name.length > 0;
     
@@ -71,7 +67,9 @@
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
         
         [alert addAction:cancelAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        [self presentViewController:alert animated:YES completion:^{
+            self.nameTextField.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:222.0/255 blue:211/255.0 alpha:1.0f];
+        }];
     }
 }
 

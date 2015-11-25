@@ -21,6 +21,9 @@
 @implementation TNParseManager
 
 - (void)sendOrder:(TNOrder *)order {
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:order];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"last_order"];
+    
     [self.currentSession.orders addObject:order];
     
     NSDictionary *orderDict = [self constructOrderDict:order];

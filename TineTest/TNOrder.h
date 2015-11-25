@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TNOrder : NSObject
+@interface TNOrder : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *orderOwner;
 @property (nonatomic, strong) NSString *additionalDetails;

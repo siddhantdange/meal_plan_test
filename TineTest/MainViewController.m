@@ -8,11 +8,14 @@
 
 #import "MainViewController.h"
 #import "MonteguesSandwichSelectionViewController.h"
+#import "SubmitOrderViewController.h"
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIButton *viewLastOrderButton;
 @property (nonatomic, strong) NSArray *restaurants;
 @property (weak, nonatomic) IBOutlet UITableView *restaurantTableView;
+@property (nonatomic, strong) TNOrder *lastOrder;
 
 
 @end
@@ -23,14 +26,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.navigationItem.title = @"Order";
+    
     self.restaurants = @[@"Montegues"];
     self.restaurantTableView.delegate = self;
     self.restaurantTableView.dataSource = self;
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"last_order"];
+    if (data) {
+        self.viewLastOrderButton.userInteractionEnabled = YES;
+        self.viewLastOrderButton.hidden = NO;
+        self.lastOrder = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    } else {
+        self.viewLastOrderButton.userInteractionEnabled = NO;
+        self.viewLastOrderButton.hidden = YES;
+    }
+}
+
+
 - (void)viewDidAppear:(BOOL)animated {
     [self.currentOrder clearOrder];
+}
+
+
+- (IBAction)viewLastOrder:(id)sender {
+    SubmitOrderViewController *submit = [[SubmitOrderViewController alloc] initWithNibName:@"SubmitOrderView" bundle:[NSBundle mainBundle] order:self.lastOrder];
+    [self.navigationController pushViewController:submit animated:YES];
 }
 
 

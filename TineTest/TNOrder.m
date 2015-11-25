@@ -54,4 +54,26 @@
              };
 }
 
+
+#pragma mark - NSCoding
+
+
+- (instancetype)initWithCoder:(NSCoder *)decoder {
+    self = [super init];
+    if (self) {
+        self.orderOwner = [decoder decodeObjectForKey:@"order_owner"];
+        self.additionalDetails = [decoder decodeObjectForKey:@"additional_details"];
+        self.details = [decoder decodeObjectForKey:@"details"];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.orderOwner forKey:@"order_owner"];
+    [aCoder encodeObject:self.additionalDetails forKey:@"additional_details"];
+    [aCoder encodeObject:self.details forKey:@"details"];
+}
+
+
 @end
