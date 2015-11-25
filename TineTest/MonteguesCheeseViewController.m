@@ -97,7 +97,6 @@
     
     NSMutableArray *nextA = [[self.nextViewControllers copy] mutableCopy];
     
-    NSLog(@"current : %@", self.currentOrder);
     if ([nextA count]) {
         TNOrderViewController *next = nextA[0];
         [nextA removeObjectAtIndex:0];
