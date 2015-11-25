@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2515C59E1C05328C00F8AA7D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C59D1C05328C00F8AA7D /* Parse.framework */; };
+		2515C5A01C0532BA00F8AA7D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C59F1C0532BA00F8AA7D /* AudioToolbox.framework */; };
+		2515C5A21C0532BE00F8AA7D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5A11C0532BE00F8AA7D /* CFNetwork.framework */; };
+		2515C5A41C0532C200F8AA7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5A31C0532C200F8AA7D /* CoreGraphics.framework */; };
+		2515C5A61C0532C800F8AA7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5A51C0532C800F8AA7D /* CoreLocation.framework */; };
+		2515C5A81C0532CD00F8AA7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5A71C0532CD00F8AA7D /* QuartzCore.framework */; };
+		2515C5AA1C0532D100F8AA7D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5A91C0532D100F8AA7D /* Security.framework */; };
+		2515C5AC1C0532D800F8AA7D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5AB1C0532D800F8AA7D /* StoreKit.framework */; };
+		2515C5AE1C0532DF00F8AA7D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5AD1C0532DF00F8AA7D /* SystemConfiguration.framework */; };
+		2515C5B01C0532E600F8AA7D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5AF1C0532E600F8AA7D /* libz.tbd */; };
+		2515C5B21C0532ED00F8AA7D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5B11C0532ED00F8AA7D /* libsqlite3.tbd */; };
+		2515C5B41C0533E100F8AA7D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515C5B31C0533E100F8AA7D /* Bolts.framework */; };
+		2515C5B71C05398000F8AA7D /* TNParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2515C5B61C05398000F8AA7D /* TNParseManager.m */; };
+		2515C5BA1C053A2C00F8AA7D /* TNSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2515C5B91C053A2C00F8AA7D /* TNSession.m */; };
 		253B136D1C041174006156F4 /* MonteguesMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 253B136C1C041174006156F4 /* MonteguesMeatViewController.m */; };
 		253B136F1C0412C0006156F4 /* MonteguesMeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 253B136E1C0412C0006156F4 /* MonteguesMeatView.xib */; };
 		254EA67D1BFC200800D501D3 /* MonteguesSandwichSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254EA67C1BFC200800D501D3 /* MonteguesSandwichSelectionViewController.m */; };
@@ -46,6 +60,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2515C59D1C05328C00F8AA7D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = TineTest/Parse.framework; sourceTree = "<group>"; };
+		2515C59F1C0532BA00F8AA7D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2515C5A11C0532BE00F8AA7D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2515C5A31C0532C200F8AA7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2515C5A51C0532C800F8AA7D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2515C5A71C0532CD00F8AA7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2515C5A91C0532D100F8AA7D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2515C5AB1C0532D800F8AA7D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2515C5AD1C0532DF00F8AA7D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2515C5AF1C0532E600F8AA7D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2515C5B11C0532ED00F8AA7D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2515C5B31C0533E100F8AA7D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2515C5B51C05398000F8AA7D /* TNParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNParseManager.h; path = ../TNParseManager.h; sourceTree = "<group>"; };
+		2515C5B61C05398000F8AA7D /* TNParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNParseManager.m; path = ../TNParseManager.m; sourceTree = "<group>"; };
+		2515C5B81C053A2C00F8AA7D /* TNSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSession.h; sourceTree = "<group>"; };
+		2515C5B91C053A2C00F8AA7D /* TNSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSession.m; sourceTree = "<group>"; };
 		253B136B1C041174006156F4 /* MonteguesMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonteguesMeatViewController.h; sourceTree = "<group>"; };
 		253B136C1C041174006156F4 /* MonteguesMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonteguesMeatViewController.m; sourceTree = "<group>"; };
 		253B136E1C0412C0006156F4 /* MonteguesMeatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonteguesMeatView.xib; sourceTree = "<group>"; };
@@ -87,6 +117,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2515C5B21C0532ED00F8AA7D /* libsqlite3.tbd in Frameworks */,
+				2515C5B01C0532E600F8AA7D /* libz.tbd in Frameworks */,
+				2515C5AE1C0532DF00F8AA7D /* SystemConfiguration.framework in Frameworks */,
+				2515C5B41C0533E100F8AA7D /* Bolts.framework in Frameworks */,
+				2515C5AC1C0532D800F8AA7D /* StoreKit.framework in Frameworks */,
+				2515C5AA1C0532D100F8AA7D /* Security.framework in Frameworks */,
+				2515C5A81C0532CD00F8AA7D /* QuartzCore.framework in Frameworks */,
+				2515C5A61C0532C800F8AA7D /* CoreLocation.framework in Frameworks */,
+				2515C5A41C0532C200F8AA7D /* CoreGraphics.framework in Frameworks */,
+				2515C5A21C0532BE00F8AA7D /* CFNetwork.framework in Frameworks */,
+				2515C5A01C0532BA00F8AA7D /* AudioToolbox.framework in Frameworks */,
+				2515C59E1C05328C00F8AA7D /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +183,18 @@
 			isa = PBXGroup;
 			children = (
 				25EE317F1BE81F3000FCAF8A /* TineTest */,
+				2515C5B11C0532ED00F8AA7D /* libsqlite3.tbd */,
+				2515C5AF1C0532E600F8AA7D /* libz.tbd */,
+				2515C59D1C05328C00F8AA7D /* Parse.framework */,
+				2515C5B31C0533E100F8AA7D /* Bolts.framework */,
+				2515C5AD1C0532DF00F8AA7D /* SystemConfiguration.framework */,
+				2515C5AB1C0532D800F8AA7D /* StoreKit.framework */,
+				2515C5A91C0532D100F8AA7D /* Security.framework */,
+				2515C5A71C0532CD00F8AA7D /* QuartzCore.framework */,
+				2515C5A51C0532C800F8AA7D /* CoreLocation.framework */,
+				2515C5A31C0532C200F8AA7D /* CoreGraphics.framework */,
+				2515C5A11C0532BE00F8AA7D /* CFNetwork.framework */,
+				2515C59F1C0532BA00F8AA7D /* AudioToolbox.framework */,
 				25EE31991BE81F3000FCAF8A /* TineTestTests */,
 				25EE31A41BE81F3000FCAF8A /* TineTestUITests */,
 				25EE317E1BE81F3000FCAF8A /* Products */,
@@ -163,6 +217,10 @@
 				254EA6791BFC1FDC00D501D3 /* Restaurant */,
 				254EA6801BFC3CC800D501D3 /* TNOrder.h */,
 				254EA6811BFC3CC800D501D3 /* TNOrder.m */,
+				2515C5B81C053A2C00F8AA7D /* TNSession.h */,
+				2515C5B91C053A2C00F8AA7D /* TNSession.m */,
+				2515C5B51C05398000F8AA7D /* TNParseManager.h */,
+				2515C5B61C05398000F8AA7D /* TNParseManager.m */,
 				25EE31831BE81F3000FCAF8A /* AppDelegate.h */,
 				25EE31841BE81F3000FCAF8A /* AppDelegate.m */,
 				25EE31861BE81F3000FCAF8A /* MainViewController.h */,
@@ -337,9 +395,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2515C5B71C05398000F8AA7D /* TNParseManager.m in Sources */,
 				25EE31881BE81F3000FCAF8A /* MainViewController.m in Sources */,
 				254EA6881BFC61C400D501D3 /* MonteguesBreadViewController.m in Sources */,
 				254EA6921BFC6D7C00D501D3 /* SubmitOrderViewController.m in Sources */,
+				2515C5BA1C053A2C00F8AA7D /* TNSession.m in Sources */,
 				25EE31851BE81F3000FCAF8A /* AppDelegate.m in Sources */,
 				254EA6821BFC3CC800D501D3 /* TNOrder.m in Sources */,
 				253B136D1C041174006156F4 /* MonteguesMeatViewController.m in Sources */,
@@ -466,6 +526,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TineTest",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TineTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddhantdange.TineTest;
@@ -477,6 +542,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TineTest",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TineTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddhantdange.TineTest;

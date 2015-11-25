@@ -7,6 +7,7 @@
 //
 
 #import "TNOrder.h"
+#import "TNParseManager.h"
 
 @implementation TNOrder
 
@@ -36,8 +37,7 @@
 
 
 - (void)sendOrder {
-    NSDictionary *orderDict = [self constructFinalDict];
-    
+    [[TNParseManager sharedInstance] sendOrder:self];
 }
 
 

@@ -53,7 +53,7 @@
         [self advance];
         
     } else {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Please  select at least one meat" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Please select at least one meat" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:cancelAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -112,7 +112,7 @@
 - (NSString *)prettyPrintArray:(NSArray *)arr {
     NSMutableString *pp = @"[".mutableCopy;
     for (NSString *str in arr) {
-        [pp appendFormat:@", %@", str];
+        [pp appendFormat:@"%@, ", str];
     }
     
     [pp appendFormat:@"]"];

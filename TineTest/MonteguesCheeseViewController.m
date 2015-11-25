@@ -53,7 +53,7 @@
         [self advance];
         
     } else {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Please  select at least one cheese" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Invalid" message:@"Please select at least one cheese" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
         [alert addAction:cancelAction];
         [self presentViewController:alert animated:YES completion:nil];

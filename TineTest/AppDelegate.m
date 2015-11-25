@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TNOrder.h"
 
+#import <Parse/Parse.h>
+
 @interface AppDelegate ()
 
 @property (nonatomic, strong) UINavigationController *navigationController;
@@ -21,6 +23,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"KJvwHj7sXK83GY71HLwcYd6zxqZCAKbN5JI72BGp"
+                  clientKey:@"Dw5t8zUdUAbae3jCJAUVZ1dkGfEwpSGCuFOiZ44u"];
+    
+    // [Optional] Track statistics around application opens.
+    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     
@@ -52,6 +71,14 @@
     }
     
     return _currentOrder;
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current Installation and save it to Parse
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
